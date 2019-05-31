@@ -1,0 +1,184 @@
+.inner
+	padding-right: 230px
+
+	position: relative
+
+	overflow: hidden
+	.menu-toggle
+		display: none
+		padding-bottom: 20px
+		font-size: 16px
+		--width : 2em
+		width: 340px
+		position: relative
+		z-index: 1
+		cursor: pointer
+		.box
+			display: inline-block
+			vertical-align: bottom
+
+			padding-top: 20px
+			padding-left: 288px
+		&.burger 
+			.rect
+				width: var(--width)
+				height: calc(var(--width) / 8)
+				background-color: black
+				margin-bottom: calc(var(--width) / 8 )
+				transition: 0.2s
+			.rect:last-of-type 
+				margin: 0
+			&.close 
+				.rect-top 
+					transform: translateY(calc(var(--width)/8*2)) rotate(45deg)
+				.rect-bottom 
+					transform: translateY(calc(var(--width)/8*2*-1)) rotate(-45deg)
+				.rect-middle 
+					opacity: 0
+	.page-header
+		display: flex
+		flex-direction: column
+		height: 100%
+		overflow-y: scroll
+		overflow-x: hidden
+
+		position: fixed
+		width: 340px
+		top: 0
+		bottom: 0
+		left: 0
+
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03)
+		&__logo
+			display: block
+			margin-bottom: 30px
+			margin-top: 30px
+
+			text-align: center
+			color: #333333
+			font-size: 40px
+			span
+				color: $orange-page
+		&__nav
+			margin: 0
+			padding: 0
+			padding-bottom: 40px
+
+			font-size: 25px
+			line-height: 30px
+			list-style: none
+		&__nav-item
+			border-bottom: 1px solid $orange-page
+		&__nav-link
+			display: block
+			padding-top: 10px
+			padding-bottom: 10px
+			padding-left: 16px
+
+			color: #333333
+			&:hover
+				color: white
+				text-decoration: none
+				background-color: $orange-page
+
+			// services-open
+			&.selected
+				color: white
+				text-decoration: none
+				background-color: $orange-page
+				+ .page-header__services-list
+					display: block
+			// services-open
+
+			&--services
+				position: relative
+
+				cursor: pointer
+				&::after
+					content: ""
+					
+					position: absolute
+					top: 20px
+					right: 28px
+					width: 8px
+					height: 15px
+
+					background-image: url(../img/index/icon/index-coil-link.svg)
+					background-repeat: no-repeat
+					transform: rotate(88deg)
+		&__services-list
+			display: none
+			margin: 0
+			margin-top: 20px
+			margin-bottom: 20px
+
+			font-size: 20px
+			line-height: 25px
+
+			list-style: none
+		&__services-link
+			display: block
+			padding-bottom: 15px
+
+			text-decoration-color: $orange-page
+			color: #333333
+		&__contacts-btn
+			display: block
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 8px
+			padding-top: 20px
+			padding-bottom: 20px
+
+			font-size: 22px
+			line-height: 30px
+			text-align: center
+			color: white
+
+			background-color: $orange-page
+			&:hover 
+				color: #000
+				text-decoration: none
+		&__contacts-call
+			display: block
+			width: 100%
+			margin: 0 auto
+			padding-top: 20px
+			padding-bottom: 20px
+
+			font-size: 22px
+			line-height: 30px
+			text-align: center
+			color: white
+
+			border: none
+			background-color: $orange-page
+		&__contacts
+			margin: 0
+			margin-top: auto
+			padding: 0
+			padding-top: 50px
+			padding-right: 20px
+			padding-left: 20px
+
+			list-style: none
+		&__contacts-item
+			margin-bottom: 15px
+
+			font-size: 22px
+			line-height: 30px
+			a
+				color: #333333
+			
+
+
+
+
+
+
+
+
+
+
+
+
