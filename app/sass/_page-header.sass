@@ -1,6 +1,4 @@
 .inner
-	padding-right: 230px
-
 	position: relative
 
 	overflow: hidden
@@ -43,12 +41,20 @@
 		overflow-x: hidden
 
 		position: fixed
-		width: 340px
 		top: 0
 		bottom: 0
 		left: 0
+		z-index: 100
+
+		width: 340px
 
 		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03)
+		background-color: white
+		div
+			height: 100vh
+		&__wrapper
+			display: flex
+			flex-direction: column
 		&__logo
 			display: block
 			margin-bottom: 30px
@@ -64,11 +70,11 @@
 			padding: 0
 			padding-bottom: 40px
 
-			font-size: 25px
+			font-size: 14px
 			line-height: 30px
+			font-weight: 500
+			text-transform: uppercase
 			list-style: none
-		&__nav-item
-			border-bottom: 1px solid $orange-page
 		&__nav-link
 			display: block
 			padding-top: 10px
@@ -77,15 +83,12 @@
 
 			color: #333333
 			&:hover
-				color: white
-				text-decoration: none
-				background-color: $orange-page
+				color: $orange-page
 
 			// services-open
 			&.selected
-				color: white
-				text-decoration: none
-				background-color: $orange-page
+				color: $orange-page
+				text-decoration: underline
 				+ .page-header__services-list
 					display: block
 			// services-open
@@ -112,7 +115,7 @@
 			margin-top: 20px
 			margin-bottom: 20px
 
-			font-size: 20px
+			font-size: 12px
 			line-height: 25px
 
 			list-style: none
@@ -127,15 +130,16 @@
 			width: 100%
 			margin: 0 auto
 			margin-bottom: 8px
-			padding-top: 20px
-			padding-bottom: 20px
+			padding-top: 10px
+			padding-bottom: 10px
 
-			font-size: 22px
+			font-size: 20px
 			line-height: 30px
 			text-align: center
 			color: white
 
 			background-color: $orange-page
+			border-radius: 5px
 			&:hover 
 				color: #000
 				text-decoration: none
@@ -157,18 +161,49 @@
 			margin: 0
 			margin-top: auto
 			padding: 0
-			padding-top: 50px
+			padding-top: 20px
 			padding-right: 20px
 			padding-left: 20px
 
+			position: relative
+
 			list-style: none
+
+			background-color: $text
+			&::before
+				content: ""
+
+				position: absolute
+				top: 0
+				z-index: -1
+				width: 200%
+				left: -50%
+				height: 100%
+
+				background-color: $text
 		&__contacts-item
 			margin-bottom: 15px
 
-			font-size: 22px
+			font-size: 18px
 			line-height: 30px
+			&--mail
+				padding-bottom: 15px
+
+				border-bottom: 2px solid white
 			a
-				color: #333333
+				color: white
+		&__policy
+			margin: 0
+
+			font-size: 14px
+			&--personal
+				padding-top: 20px
+				padding-bottom: 5px
+			&--bitrix
+				padding-bottom: 20px
+			a
+				color: $text
+
 			
 
 

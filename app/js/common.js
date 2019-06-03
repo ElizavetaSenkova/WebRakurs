@@ -68,4 +68,15 @@ $(function() {
 
 	// popup
 
+	$("#stages__slider").slick({
+    dots: true,
+    customPaging: function(slider, i) { 
+        return '<button class="tab">' + $(slider.$slides[i]).find('[data-title]').data('title') + '<i class="fa fa-sort-asc"></i></button>';
+		},
+		appendDots:'.custom-dots',
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
 });

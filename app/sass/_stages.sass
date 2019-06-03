@@ -1,0 +1,130 @@
+.stages
+	margin-top: 102px
+	&__title
+		font-size: 24px
+		text-transform: uppercase
+		font-weight: normal
+	&__slider
+		position: relative
+	&__slide
+		display: flex !important
+		margin-top: 34px
+	.slick-active .tab
+		color: $orange-page
+	.slick-prev,
+	.slick-next
+		position: absolute
+		top: 164px
+		z-index: 10
+
+		width: 34px
+		height: 34px
+
+		font-size: 0
+
+		background-color: inherit
+		border: none
+	.slick-prev
+		left: 60px
+		&::before
+			content: ""
+
+			position: absolute
+			top: 6px
+			left: 10px
+
+			width: 18px
+			height: 24px
+
+			background-image: url("../img/stages/icon/arrow-left.png")
+			background-repeat: no-repeat
+	.slick-next
+		right: 60px
+		&::before
+			content: ""
+
+			position: absolute
+			top: 6px
+			left: 10px
+
+			width: 18px
+			height: 24px
+
+			background-image: url("../img/stages/icon/arrow-right.png")
+			background-repeat: no-repeat
+	.slick-dots
+		display: flex
+		justify-content: center
+		margin: 0
+
+	 
+		top: 22px
+		left: 116px
+
+		list-style: none
+		li
+			margin-right: 24px
+
+			font-size: 16px
+			text-transform: uppercase
+		button
+			font-size: 16px
+			text-transform: uppercase
+			color: #666666
+
+			background-color: inherit
+			border: none
+	&__image-inner
+		position: relative
+	&__layer-3
+			position: absolute
+			top: 10%
+			left: 0
+			z-index: -1
+
+			width: 40%
+
+			background-image: url("../img/stages/layer-3.png")
+	&__layer-1
+			position: absolute
+			top: 4%
+			left: 25%
+
+			background-image: url("../img/stages/layer-1.png")
+			background-repeat: no-repeat
+	&__image
+		margin-left: 30%
+		min-width: 70%
+		max-width: 70%
+
+		position: relative
+	&__info
+		margin-left: 30px
+	&__slider-title
+		margin-top: 20px
+
+		font-size: 20px
+		font-weight: normal
+		text-transform: uppercase
+		color: $orange-page
+		span
+			position: relative
+
+			color: white
+			&::before
+				content: ""
+
+				position: absolute
+				z-index: -1
+				top: 0
+				left: -30px
+
+				width: 98px
+				height: 28px
+
+				background-color: $orange-page
+	&__slider-text
+		width: 426px
+
+		font-size: 16px
+		line-height: 21px
