@@ -79,4 +79,12 @@ $(function() {
     slidesToScroll: 1
 });
 
+
+$('#stages__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){ 
+	$('.slick-slide[data-slick-index='+currentSlide+'] .stages__image-inner img').removeClass('animated bounceInUp');
+		 $('.slick-slide[data-slick-index='+nextSlide+'] .stages__image-inner img').addClass('animated bounceInUp');
+	});
+
+  new WOW().init();
+
 });
