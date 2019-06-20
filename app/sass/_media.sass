@@ -3,18 +3,28 @@
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-+media-breakpoint-down(lg)
-
-
-// ≥992px
-+media-breakpoint-down(md)
+@media (max-width: 1300px) 
 	.inner
+		.page-header
+			display: none
 		.menu-toggle
 			display: block
+		.main
+			margin: 0 auto
+		.page-footer
+			width: unset
+			margin-left: 0
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.inner
 		.page-header
 			&__logo
 				margin-top: 58px
+
+// ≥992px
++media-breakpoint-down(md)
+	
 
 // ≥768px
 +media-breakpoint-down(sm)
