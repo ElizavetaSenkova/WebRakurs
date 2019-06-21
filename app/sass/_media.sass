@@ -3,13 +3,37 @@
 
 /*==========  Desktop First  ==========*/
 
-@media (max-width: 1300px) 
+@media (min-width: 1280px)
 	.inner
+		.top-panel
+			display: none
+
+@media (max-width: 1279px) 
+	.overlay
+			background: #000
+			height: 100%
+			opacity: 0.5
+			position: fixed
+			width: 100%
+			z-index: 100
+			top: 0
+			left: 0
+			display: none
+	.inner
+		position: relative
+		.top-panel
+			display: block
 		.page-header
 			display: none
-		.menu-toggle
-			display: block
+			padding-top: 90px
+
+			top: 0
+			&__logo
+				display: none
+
+
 		.main
+			width: unset
 			margin: 0 auto
 		.page-footer
 			width: unset
@@ -28,9 +52,22 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+	.inner
+		.main
+			.stages 
+				.slick-dots 
+					button
+						font-size: 13px
 
 // ≥576px
 +media-breakpoint-down(xs)
+	.inner
+		.top-panel
+			&__logo
+				margin-left: 40px
+
+				font-size: 35px !important
+				line-height: 60px
 
 
 /*==========  Mobile First  ==========*/
